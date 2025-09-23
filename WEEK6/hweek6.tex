@@ -1,0 +1,58 @@
+% Do not modify the template. Enter your solution in the indicated locations only.
+\documentclass[answers,a4paper,11pt]{exam}
+\usepackage[top=2cm,bottom=2.5cm,left=1cm,right=1.5cm,a4paper]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[shortlabels]{enumitem}
+
+\pagestyle{headandfoot}
+\lhead{Deadline: Week 6, Tuesday 23:59.} % Week number
+%\chead{At-home assignment}
+\rhead{T-304-CACS}
+\cfoot{Calculus for Computer Science}
+\rfoot{Page \thepage{} of \numpages}
+
+\begin{document}
+
+\noindent
+\textbf{Name: Jóhann Berentsson} % WRITE YOUR NAME HERE
+
+\vspace{0.5em}
+\noindent
+\textbf{Kennitala: 050188-2489} % WRITE YOUR KENNITALA HERE
+
+\vspace{0.5em}
+\noindent
+Explain your solution concisely but clearly. Include all derivation steps. Make sure a fellow student would be able to understand what you mean.
+
+\begin{questions}
+
+% PROBLEM 1
+\question
+Use L'H\^opital's rule as many times as necessary to find the following limit. State \emph{why} you can use L'H\^opital's rule. (What condition needs to be satisfied?)
+\[
+L = \lim_{x\to 0} \frac{(x+1) e^{-x} - 1}{\sin^2 x}
+\]
+    
+\input{one.tex}
+    
+\newpage
+
+% PROBLEM 2
+\question
+Consider the function
+\[
+f(x) = \frac{x^2+2 x+1}{x^2+3 x+3}
+\]
+\begin{enumerate}
+\item Make a sketch of the function and observe where it reaches its smallest and largest value. Use GeoGebra or any other tool for plotting.
+\item State what the value of $f'(x)$ is at the points $x$ where $f(x)$ reaches its smallest and largest value (``bottom of the valley'', ``peak of the mountain'').
+\item Find a formula for $f'(x)$. Simplify it fully.
+\item Solve the equation $f'(x) = 0$. This gives the location of the maximum and minimum.
+\end{enumerate}
+
+\input{two.tex}
+
+\end{questions}        
+\end{document}

@@ -1,0 +1,82 @@
+\begin{solutionbox}{\stretch{-1}}
+
+\[
+    f(0) = \frac{(0+1)e^{-0}-1}{sin^2(x)} = \frac{(1 \times 1) - 1}{0} = \frac{0}{0}
+\]
+
+Since this is $\frac{0}{0}$ we need to apply the L'Hopital's rule.
+
+\section*{1.}
+\[
+    f(x) = \frac{g(x)}{h(x)}
+\]
+
+\[
+    h(x) = sin^2(x)
+\]
+
+\subsection*{h'(x):}
+\[
+    h'(x) = [sin^2(x)] \frac{d}{dx} = 2[sin^2(x)] \frac{d}{dx} = 2(sin(x))\times cos(x) = 2sin(x)cos(x)
+\]
+
+
+\subsection*{g'(x):}
+\[
+    g(x) = (x + 1)e^{-x}-1
+\]
+\[
+    g'(x) = [(x + 1)e^{-x}]\frac{d}{dx} - [1] \frac{d}{dx} = ((1)(e^{-x}) + (x + 1)(-e^{-x})) - (0)
+\]
+
+\[
+    = (e^{-x}) + (-xe^{-x} - e^{-x}) = e^{-x} - xe^{-x} - e^{-x} = -xe^{-x}
+\]
+
+\subsection*{1. Result}
+\[
+    f'(x) = \frac{g'(x)}{h'(x)} = \frac{-xe^{-x}}{2sin(x)cos(x)}
+\]
+
+\[
+    f'(0) = \frac{-e^{0} \times 0}{2\times0\times1} = \frac{0}{0}
+\]
+
+We need to apply the rule again.
+
+\end{solutionbox}\newpage
+\begin{solutionbox}{\stretch{-1}}
+
+
+\section*{2.}
+\[
+    f''(x) = \frac{g''(x)}{h''(x)}
+\]
+
+\subsection*{g''(x):}
+
+\[
+    g''(x) = [-xe^{-x}] \frac{d}{dx} = (e^{-x})(x) + (-e^{x})(1) = (xe^{-x}-e^{-x}) = e^{-x}(x-1)
+\]
+
+\subsection*{h''(x):}
+
+\[
+    h''(x) = [2sin(x)cos(x)] \frac{d}{dx} = 2[sin(x)cos(x)] \frac{d}{dx} = (cos(x))(cos(X)) + (sin(x))(-sin(x)))
+\]
+
+\[
+    = (cos^2(x) -sin^2(x))
+\]
+
+
+\[
+    f''(x) = \frac{e^{-x}(x-1)}{2(cos^2(x)-sin^2(x))} 
+\]
+
+\[
+    f''(0) = \frac{e^{0}(0-1)}{2(cos^2(0)-sin^2(0))} = \frac{1 \times (-1)}{2(1-0)} = \frac{-1}{2}
+\]
+
+Now we have an answer we can use!
+\end{solutionbox}
