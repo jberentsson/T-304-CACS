@@ -1,0 +1,441 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{graphics,amsmath,amsfonts,amsbsy,amssymb,amsthm}
+\usepackage[a4paper]{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{datatool}
+\usepackage{float}
+\usepackage{framed}
+\usepackage{listingsutf8}
+\usepackage{enumerate}
+\usepackage{comment}
+\usepackage{epstopdf}
+\usepackage{cancel}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{tikz}
+\usepackage{mathtools}
+%\usepackage{algorithmicx}
+\begin{document}
+
+\section*{Lines}
+
+\subsection*{Equation of a line}
+
+$(4, -3)$ and $(-1, 1)$
+\newline
+
+\noindent $y = mx + b$
+
+\noindent $ y - y_{0} = m(x - x_{0})$
+\newline
+
+\subsubsection*{Slope of line}
+
+\noindent $(-1 - (-3)) = m(1 - 4)$
+
+\noindent $m = \frac{(1 - (-3))}{-1 - 4}$
+
+\noindent $\boxed{m = -\frac{4}{5}}$
+\newline
+
+
+\subsubsection*{Point Slope}
+
+\noindent $(y - (-3)) = \frac{-4}{5}(x - 4)$
+
+\noindent $y + 3 = -\frac{4}{5}(x - 4)$
+
+\noindent $y + 3 = -\frac{4}{5}x + \frac{16}{5}$
+
+\noindent $y= -\frac{4}{5}x + \frac{16}{5} - 3$
+
+\noindent $y= -\frac{4}{5}x + \frac{16}{5} - \frac{15}{5}$
+
+\noindent $\boxed{y= -\frac{4}{5}x + \frac{1}{5}}$
+
+\subsubsection*{Slope intercept}
+
+\noindent $y = mx + b$
+
+\noindent $-3 = (-\frac{4}{5} \times 4) + b$
+
+\noindent $-3 = -\frac{16}{5} + b$
+
+\noindent $b = -3 - (-\frac{16}{5})$
+
+\noindent $b = -\frac{15}{5} + \frac{16}{5}$
+
+\noindent $\boxed{b = \frac{1}{5}}$
+
+\newpage
+
+\section*{Angles}
+
+
+\noindent $cos \frac{\pi}{6} = \frac{\sqrt{3}}{2}$
+
+\noindent $cos \frac{\pi}{4} = \frac{\sqrt{2}}{2}$
+
+\noindent $cos \frac{\pi}{3} = \frac{1}{2}$
+
+\noindent $cos \frac{\pi}{2} = 1$
+\newline
+
+\noindent It's not possible to find exact value of $cos \frac{7\pi}{12}$
+
+\noindent Then we need to use:
+
+\begin{itemize}
+    \item $cos(\pi - x) = -cos x$
+    \item $cos(\frac{\pi}{2} - x) = sin x$
+    \item $cos(x + y) = cos(x)cos(y) - sin(x)sin(y)$
+\end{itemize}
+
+
+\noindent We can represet $\frac{7\pi}{12}$ as a sum: $\frac{3\pi}{12} + \frac{4\pi}{12} = \frac{\pi}{4} + \frac{\pi}{3}$
+
+\noindent $cos \frac{7}{12} = cos (\frac{\pi}{4} + \frac{\pi}{3}) = cos(\frac{\pi}{4})cos(\frac{\pi}{3}) - sin(\frac{\pi}{4})sin(\frac{\pi}{3})$
+
+\noindent $ = \frac{\sqrt{2}}{2}cos(\frac{\pi}{3}) - \frac{\sqrt{2}}{2}sin(\frac{\pi}{3})$
+
+\noindent $ = \frac{\sqrt{2}}{4} - \frac{\sqrt{2}\sqrt{3}}{4}$
+
+\noindent $ = \boxed{\frac{\sqrt{2} - \sqrt{6}}{4}}$
+
+
+\newpage
+
+
+\section*{Simplify}
+
+$(\frac{3y\sqrt{x}}{6x^3 y^{-4}})^2$
+
+\noindent $(\frac{y\sqrt{x}}{3x^3 y^{-4}})^2$
+
+
+\noindent $= ((y x^{\frac{1}{2}})(2x^{3} y^{-4})^{-1})^2$
+
+\noindent $= ((y x^{\frac{1}{2}})(\frac{1}{2}x^{-3} y^{4}))^2$
+
+\noindent $= (yx^{\frac{1}{2}} \frac{1}{2}x^{-3} y^4)^2$
+
+\noindent $= (\frac{1}{2}x^{\frac{1}{2} + (-3)} y^{1+4})^2$
+
+\noindent $= (\frac{1}{2}x^{\frac{1}{2} - \frac{6}{2}} y^{1+4})^2$
+
+\noindent $= (\frac{1}{2}x^{\frac{-5}{2}} y^5)^2$
+
+\noindent $= (\frac{1}{4} x^{\frac{-5}{2} + \frac{-5}{2}} y^{10})$
+
+\noindent $= (\frac{1}{4} x^{\frac{-10}{2}} y^{10})$
+
+\noindent $= (\frac{1}{4} x^{-5} y^{10})$
+
+\noindent $\boxed{= \frac{y^{10}}{4 x^{5}}}$
+
+
+\newpage
+
+
+\section*{Simplify Logarithms}
+
+
+\begin{itemize}
+    \item $log \frac{a}{b} = log (a) - log (b)$
+    \item $log(a \times b) = log (a) + log (b)$
+    \item $log(a^b) = b \times log (a)$
+    \item $x^a x^b = x^{a+b}$
+\end{itemize}
+
+\subsubsection*{Example:}
+
+Expand and simplify $log_{4} \frac{a^4 \sqrt[3]{4}}{2e^{-ln(64)}}$
+
+\noindent $log_{4}(a^4 \sqrt[3]{4}) - log_{4}(2e^{-ln(64)})$
+
+\noindent $= ((log_{4}(a^4))+(log_{4}(\sqrt[3]{4}))) - ((log_4(2))+(log_{4}(e^{-ln(64)})))$
+
+\noindent $= (log_{4}(a)+(log_{4}(4^{\frac{1}{3}}))) - (log_{4}(\sqrt{4}) + ((log_4(2)) + log_{4}(64)))))$
+
+\noindent $= (log_{4}(a^4)+(log_{4}(4)^\frac{1}{3}) - log_{4}(\sqrt{4}) - (log_{4}(2)) + ((log(64))))$
+
+\noindent $= (log_{4}(a^4)+ log_{4}(4^{\frac{1}{3}}) -  log_{4}(2)+ (log_{4}(64))$
+
+\noindent $= 4log_{4}(a) + \frac{1}{3} - \frac{1}{2} + 3$
+
+\noindent $= \boxed{4log_{4}(a) + \frac{17}{6}}$
+
+
+
+\newpage
+
+\section*{Product Rule Practice}
+
+\subsection*{1.}
+
+$\frac{d}{dx} x arctan x = \frac{d}{dx} f(x) \times g(x)$
+\newline
+
+\noindent $f(x) = x$
+
+\noindent $f'(x) = 1$
+
+\noindent $g(x) = arctan (x)$
+
+\noindent $g'(x) = \frac{1}{1 + x^2}$
+\newline
+
+\noindent $\frac{d}{dx} f(x)g(x) = f(x)g'(x) + f'(x)g(x)$
+
+\noindent $\frac{d}{dx} x arctan(x) = x \times \frac{1}{1 + x^2} + arctan(x) * 1$
+
+
+
+\subsection*{2.}
+
+\noindent $\frac{d}{dx} \frac{ln x}{x}$
+\newline
+
+\noindent $f(x) = ln(x)$
+
+\noindent $f'(x) = \frac{1}{x}$
+
+\noindent $g(x) = x^-1$
+
+\noindent $g'(x) = -x^(-2)$
+\newline
+
+\noindent $\frac{d}{dx} = ln(x) \times (-x^{-2}) + \frac{1}{x} \times x^{-1} = \frac{-ln(x)}{x^2} + \frac{1}{x^2} = \frac{1 - ln(x)}{x^2}$
+
+\subsection*{3.}
+
+\noindent $\frac{d}{dx} 4x^5 \sqrt{x}$
+\newline
+
+\noindent $f(x) = 4x^5$
+
+\noindent $f'(x) = 5 \times 4 x^{5-1} = 20 x^4$
+
+\noindent $g(x) = \sqrt{x}$
+
+\noindent $g'(x) = \frac{1}{2\sqrt{x}}$
+\newline
+
+\noindent $\frac{d}{dx} 4x^4 \sqrt{x} = 4x^2 \times \frac{1}{2\sqrt{x}} + 20x^4 \times \sqrt{x} = 2x^{\frac{9}{2}} + 20x^{\frac{9}{2}} = 22x^{\frac{9}{2}}$
+
+\newpage
+
+\section*{Chain Rule}
+
+\noindent $\frac{d}{dx} f(g(x)) = g'(x) \times f'(g(x))$
+
+\subsection*{1.}
+\noindent $\frac{d}{dx} e^{sin(x)+x^2}: f(x) = e^{g(x)}$
+\newline
+
+\noindent $f(x) = e^x$
+
+\noindent $f'(x) = e^x$
+
+\noindent $g(x) = sin(x) + x^2$
+
+\noindent $g'(x) = cos(x) + 2x$
+\newline
+
+\noindent $\frac{d}{dx} sin(x) + x^2 = (cos(x) + 2x)e^{sin(x)+x^2}$
+
+\subsection*{2.}
+\noindent $\frac{d}{dx} \frac{1}{2+3x^4}: f(x) = \frac{1}{g(x)}$
+\newline
+
+\noindent $f(x) = \frac{1}{x}$
+
+\noindent $f'(x) = \frac{-1}{x^2}$
+
+\noindent $g(x) = 2 + 3x^2$
+
+\noindent $g'(x) = 6x$
+\newline
+
+\noindent $\frac{d}{dx} \frac{1}{2+3x^4} = 6x\frac{-1}{(2+3x^4)^2} = \frac{-6x}{(2+3x^4)^2}$
+
+\subsection*{3.}
+\noindent $\frac{d}{dx} 2cos^3 (x): f(x) = 2(g(x))^3$
+\newline
+
+\noindent $f(x) = 2x^3$
+
+\noindent $f'(x) = 6x^2$
+
+\noindent $g(x) = cos(x)$
+
+\noindent $g(x) = -sin(x)$
+\newline
+
+\noindent $\frac{d}{dx} 2cos^3 (x) = (-sin(x))(6cos(x)^2) = -6(sin(x)(cos(x))^2$
+
+\newpage
+
+\section*{All Local Minima and All Local Maxima}
+Occurs at critical points so we need f'(x).
+
+\subsection*{1.}
+\noindent $g(x) = xe^{-x^2}$
+
+\noindent $g'(x) = -2xe^{-x^2}$
+
+\noindent $h(x) = -x^2$
+
+\noindent $h'(x) = 2 \times -x^{2-1} = -2x$
+\newline
+
+\noindent $f'(x) = h'(x) \times g(x) + h(x) \times g'(x)$
+
+\noindent $f'(x) = (1) \times (e^{-x^2}) + (x) \times (-2xe^{-x^2})$
+
+\noindent $f'(x) = ((e^{-x^2}) + (-2x^2 e^{-x^2}))$
+
+\noindent $\boxed{f'(x) = (1 - 2x^2)e^{-x^2}}$
+
+$P_1 = \frac{1}{\sqrt{2}}$
+
+$P_2 = -\frac{1}{\sqrt{2}}$
+
+\subsubsection*{2.}
+
+since $e^x > 0$  the $(1 - 2x^3)$ is the critical point.
+
+
+\noindent $g(x) = (1 - 2x^2)$
+
+\noindent $g'(x) = -4x$
+
+\noindent $f''(x) = g'(x)e^{-2x} + g(x)g'()$
+
+$= (-4x)e^{-x^2} + (1 - 2x^2)(-2xe^{-x^2})$
+
+$= (-6x+4x^3)e^{-x^2}$
+
+
+
+$P_1 = \frac{1}{\sqrt{2}}$ (local maxmimum)
+
+$P_2 = -\frac{1}{\sqrt{2}}$ (local mimiumum)
+
+\newpage
+
+\section*{Global Optimization}
+
+$f(x) = arctan(x) - \frac{x}{2}$ at interval $[-\sqrt{3}, \frac{1}{\sqrt{3}}]$
+
+\noindent $f'(x) = \frac{1}{1 + x^2} - \frac{1}{2}$
+
+\noindent Zeroes at $x = -1$ and $\cancel{x = 1}$
+
+\noindent $f(-\sqrt{3}) = arctan(-\sqrt{3}) - \frac{-\sqrt{3}}{2} = -\frac{\pi}{3} - \frac{-\sqrt{3}}{2} = \frac{3\sqrt{3} - 2\pi}{6}$
+
+\noindent $f(-1) = arctan (-1) - \frac{-1}{2} = -\frac{\pi}{4} - \frac{-1}{2} = \frac{2-\pi}{4}$
+
+\noindent $f(\frac{1}{\sqrt{3}}) = arctan (\frac{1}{\sqrt{3}}) - \frac{\frac{1}{\sqrt{3}}}{2} = \frac{\pi}{6} - \frac{1}{2\sqrt{3}} = \frac{\pi - \sqrt{3}}{6}$
+
+\noindent $f(x)$ acheves a maxmimum value of $\frac{\pi - \sqrt{3}}{6} = \frac{1}{\sqrt{3}}$
+
+\noindent $f(x)$ acheves a minimum value of $\frac{2 -\pi}{4}$ at $x=-1$.
+
+\newpage
+
+\section*{Taylor Approximation}
+
+\noindent find the second order Taylor approximation of $f(x) = arctan(\sqrt{x})$ around the point $a=1$.
+
+\subsection*{f'}
+
+\noindent Let $g_1(x) = \sqrt{x}$
+
+\noindent $g_1'(x) = \frac{1}{2\sqrt{x}}$
+
+\noindent Then $f_1'(x) = \frac{1}{1+g(x)^2}g_1'(x)$
+
+\noindent $= \frac{1}{1+\sqrt{x^2}} \times \frac{1}{2\sqrt{x}} = \frac{1}{2\sqrt{x} + 2x^{\frac{3}{2}}}$
+
+\subsection*{f''}
+
+\noindent Let  $g_2(x) = 2\sqrt{x} + 2x^{\frac{3}{2}}$
+
+\noindent $g_2'(x) = \frac{1}{\sqrt{x}} + 3\sqrt{x}$.
+
+\noindent Then $f''(x) = -1 \times g_2(x)^{-2} \times g_2'(x)$
+
+$=[-(2\sqrt{x} + 2x^{\frac{3}{2}})^{-2}] \times (\frac{1}{\sqrt{x}} + 3\sqrt{x})$
+
+\subsection*{Solution}
+
+\noindent $f(1) = arctan(\sqrt{1}) = arctan (1) = \frac{\pi}{4}$
+
+\noindent $f'(1) = \frac{1}{2\sqrt{1} + 2(1)^{\frac{3}{2}}} = \frac{1}{2+2} \frac{1}{4}$
+
+\noindent $f''(1) = -(2\sqrt{1} + 2(1)^{\frac{3}{2}})^{-2}(\frac{1}{\sqrt{1}} + 3\sqrt{1}) = -4^{-2} 4 = -\frac{1}{4}$
+
+\noindent $f(1) + \frac{f'(1)}{1!}(x-1) + \frac{f''(1)}{2!}(x-1)^2 = \frac{\pi}{4} + \frac{\frac{1}{4}}{1!} + \frac{\frac{-1}{4}}{2!}(x-1)^2$
+
+\newpage
+
+\section*{Optimization word problem}
+
+\noindent we have $45 m^2$ of material to build a box with a square base and no top. Determine the dimensions of the box that will maximize the enclosed volume.
+\newline
+
+\noindent volume formulas
+
+\noindent $V = l \times w \times h$
+
+\noindent $V = w^2 \times h$
+\newline
+
+\noindent $V = w^2 (\frac{45 - w^2}{4w})$
+
+\noindent $V = \frac{1}{4} (45w-w3)$
+\newline
+
+\noindent material used:
+
+\noindent $M = 1 * w^2 + 4 \times wh$
+\newline
+
+\noindent $45 = w^2 + 4wh$
+
+\noindent $h = \frac{45 - w^2}{4w}$
+\newline
+
+\noindent our goal is to maximize V, so we differentiate to find critical points
+
+\noindent $V' = \frac{1}{4} (45 - 3w^2)$
+
+\noindent Zeroes at: $w = \sqrt{15}$ and \cancel{$w = -\sqrt{15}$}
+
+\noindent The first derivative test tells us that $\sqrt{15}$ is a maximum.
+
+\subsection*{Solution}
+
+we need to solve for h.
+
+$h = \frac{45 - w^2}{4w}$
+
+$h = \frac{45-\sqrt{15}^2}{4\sqrt{15}}$
+
+$h = \frac{45 - 15}{4\sqrt{15}}$
+
+$h = \frac{15}{2\sqrt{15} = \frac{\sqrt{15}}{2}}$
+
+Width of $\sqrt{15}$.
+
+Length of $\sqrt{15}$.
+
+Height of $\sqrt{15}$.
+
+\end{document}
+
