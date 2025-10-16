@@ -43,6 +43,240 @@ $g(x) = 2sin(x) + 4cos(x)$
 $g'(x) = 2cos(x) - 4sin(x)$
 
 
+\subsection*{Derivative}
+
+$f(x) = sqrt(x)cos^2(x + 1)$
+
+
+\section*{Midterm}
+
 TODO: add midterm to calendar 2. or 3. of October.
+
+\begin{itemize}
+    \item Optimisation (Local / Gloal)
+    \item Derivatives
+    \item L'Hopital
+    \item Word Problem
+\end{itemize}
+
+\newpage
+
+\subsection*{L'Hopital}
+
+$lim_{x \to 0} \frac{x-xcos(x)}{x-sin(x)}$
+
+\noindent $f(0) = \frac{0 - 0 \times 1}{0 - 0} = \frac{0}{0} = 0$
+
+\noindent $= 1 - (cos(x)-xsin(x)) = 1 - cos(x) + xsin(x)$
+
+\noindent Use product rule on the counter.
+
+\noindent $h(x) = x - xcos(x)$
+
+\noindent $h'(x) = 1 - [xcos(x)]\frac{d}{dx} = 1 - ((x)(-sin(x)) + (1)(cos(x))) = 1 - (-xsin(x)+cos(x))$
+
+\noindent $g'(x) = [x-sin(x)]\frac{d}{dx} = 1 - cos(x)$
+
+\noindent $f'(x) = \frac{h'(x)}{g'(x)} = \frac{[\frac{x-xcos(x)}{x-sin(x)}]\frac{d}{dx}}{[x-sin(x)\frac{d}{dx}]} = $
+
+\noindent $f'(0) = \frac{1-1 + 0 \times 0}{1 -1} = 0$
+
+\noindent $f''(x) = \frac{h''(x)}{g''(x)} = \frac{xcos(x) + sin(x)}{sin(x)}$
+
+\noindent $h''(x) = [1-cos(x)+xsin(x)]\frac{d}{dx} = 0 - (-sin(x)) + [xsin(x)]\frac{d}{dx}$
+
+$= (x)(cos(x)) + (1)(sin(x)) = xcos(x) + sin(x)$
+
+$= sin(x) +(xcos(x)) + sin(x)$
+
+$g''(x) = [1-cos(x)]\frac{d}{dx} = 0 - (-sin((x)) = sin(x))$ 
+
+
+\noindent $f''(0) = \frac{0 + 0 + 0}{0} = \frac{0}{0}$
+
+\noindent $f'''(x) = \frac{h'''(x)}{g'''(x)}$
+
+\noindent $h'''(x) = \frac{[sin(x) + xcos(x) +sin(x)]\frac{d}{dx}}{[sin(x)]\frac{d}{dx}} = \frac{cos(x) + cos(x) + sin(x) + cos(x)}{cos(x)}$
+
+\noindent $h'''(0) = \frac{1 + 1 + 1}{1} = \frac{3}{1} = 3$
+
+\newpage
+
+\section*{Word Problem}
+
+
+Given a parameter $P$, what rectangle has the largest area.
+
+maximize a function = find the derivative
+
+\noindent $P = 2x + 2y$
+
+\noindent $A(x, y) = x \times y$
+
+\noindent $2y = P -2x$
+
+\noindent $y = \frac{P}{2} - \frac{2x}{2} = \frac{P}{2} - x$
+
+\noindent $A(x, y) = x \times (\frac{P}{2} - x) = \frac{P}{2}x - x^2$
+
+\noindent $A(x) = \frac{P}{2}x - x^2$
+
+\noindent $A'(x) = \frac{P}{2} - 2x$
+
+\noindent $\frac{P}{2} - 2x = 0 => x = \frac{P}{4}$
+
+\noindent $2y = P - 2x$
+
+\noindent $y = \frac{P}{2} - \frac{2x}{2} = (\frac{P}{2} - x)$
+
+\noindent $y = (\frac{P}{2} - \frac{P}{4}) = \frac{P}{4}$
+
+\begin{verbatim*}
+    P/4
+-----------
+|         |
+|         | p
+|         | -
+|         | 4
+----------|
+\end{verbatim*}
+
+
+$\frac{P}{4} \times \frac{P}{4} = \frac{P2}{16}$
+
+\newpage
+
+\subsection*{Optimisation}
+
+take derivative, set to 0.
+
+\noindent If bounded, check ends.
+\noindent $f(x) = xe^-2$ on range $[-\frac{1}{2}, 2]$
+
+
+\noindent product rule and chain rule
+
+\noindent $f'(x) = [xe^(-x^2)] \frac{d}{dx}$
+
+\noindent $h(x) = x$
+
+\noindent $h'(x) = 1$
+
+\noindent $g(x) =e^-2$
+
+\noindent $g'(x) = [f(g(x))]\frac{d}{dx} = f'(g(x)) \times g'(x)$
+
+
+\noindent $f(x) = e^x$
+
+\noindent $g(x) = -x^2$
+
+\noindent $f'(x) = e^x$
+
+\noindent $g'(x) = -2x$
+
+\noindent $f'(x) = e^{-x^2} \times (-2x) + e^{-x^2}$
+
+$ = -2x^{2}e^{-x^2} + e^{-x^2} = 0$
+
+\noindent We need $ln$ to get rid of the e.
+
+\noindent $ln(-2x^{2}e^{-x^2} + e^{-x^2}) = ln(0)$
+
+\noindent $2ln(2xe^{-x^2} + e^{-x^2}) = ln(0)$
+
+$2 \times (-x^2) \times (-x^2) \to 2 \times a \times a = 2a^2 \to 2(-x^2)^2 = -2x^4$
+
+this is simpler
+
+$e^{-x^2}(2x^2 + 1)$
+
+$-2x^2 + 1 = 0$
+
+
+\newpage
+
+\subsection*{Taylor series}
+Not on midterm
+
+\newpage
+
+\subsection*{Intergrals}
+\begin{tabular}{l l}
+    U-substitution       &  Chain Rule \\
+    integration by-parts &  Product Rule \\
+\end{tabular}
+\newline
+
+\begin{tabular}{l l}
+    $u = x$             & $dv = e^x dx$ \\
+    $\frac{du}{dx} = 1$ & $v = e^x$     \\
+    $du = dx$           &               \\
+\end{tabular}
+\newline
+
+\subsection*{Example 1}
+
+\noindent $\int v dv = uv - \int v dv $
+
+\noindent $\boxed{\int x e^x dx} = x e^x - \int e^x dx$
+
+\noindent $=  xe^x - e^x + C$
+
+\noindent $= e^x (x - 1) + C$
+
+\subsection*{Example 2}
+
+$\int_{0}^{1} x^2 \sqrt(1 - x) dx$ Integration by parts.
+
+\noindent $\int x \sqrt{x} = \int x^\frac{3}{2}$
+
+\noindent $\int_{0}^{1} x^2 \sqrt(1 - x) dx = [-\frac{2}{3}x^2 (1-x)^\frac{3}{2}]_{0}^{1} + \boxed{\frac{2}{3} \int_{0}^{1}ex(1-x)^\frac{3}{2} dx}$
+
+\noindent Plug in the numbers.
+
+\noindent $[-\frac{2}{3} \times \frac{4}{5} \times x(1-x)^\frac{5}{2}]_{0}^{1} + \frac{2}{3} \times \frac{4}{5}$
+
+\noindent $[-\frac{2}{3} \times \frac{4}{5} \times \frac{2}{7} \times (1-x)^\frac{7}{2}]_{0}^{1} = \frac{16}{105}$
+
+\subsection*{Example 3}
+
+U-substitution
+
+\noindent $\int_{0}^{1} x^2 \times \sqrt{1 - x} = - \int_{1}^{0} (1 - u)^2 \times \sqrt{u} du$
+
+\noindent $\boxed{u = 1 - x}$
+
+\noindent $\boxed{dx = -du}$
+
+\noindent $= \int_{0}^{1} (1-2u-u^2)\sqrt{u} du = \int_{0}^{1} (u^\frac{1}{2} - 2u^\frac{3}{2} + u^\frac{5}{2}) du$
+
+\noindent $\int a + b - c = \int a + \int b - \int c$
+
+\noindent $[\frac{2}{3}u^\frac{3}{2}]_{0}^{1} - [-\frac{4}{5}u^\frac{4}{5}]_{0}^{1} + [\frac{2}{7} u^\frac{7}{2}]_{0}^{1} = \frac{70 - 84 + 30}{105} = \boxed{\frac{16}{105}}$
+\newline
+
+\noindent How do I know which to use? Do 100 intergrals!
+
+\newpage
+
+\subsection*{Examaple 3}
+
+$\int_{0}^{1} x^2 \sqrt{1 - x} dx$ Integrate by-parts.
+
+\noindent $\boxed{\int u du = uv - \int v du}$
+
+\noindent $u = x^2$ $\frac{du}{dx} = 2x$ $du = 2xdx$
+
+\noindent $dv = \sqrt{1 - x}$ $v = \frac{2(1-x)^\frac{3}{2}}{3}$
+
+\noindent $=(1-x)^\frac{1}{2} = \frac{(1-x)^\frac{3}{2}}{\frac{3}{2}} = \frac{2(1-x)^\frac{3}{2}}{3}$
+
+\noindent $=[\frac{2}{3} x^2 (1-x)^\frac{3}{2}]_{0}^{1} - \frac{2}{3} \int (1 - x)^\frac{3}{2} \sqrt(1-x)$
+
+\noindent $[-\frac{2}{3} x^2 (1 - x)^\frac{3}{2}]_{0}^{1} + \frac{2}{3} \int (1-x)^\frac{3}{2} 2x dx$
+\newline
+
+\noindent There might be some errors in this example.
 
 \end{document}
