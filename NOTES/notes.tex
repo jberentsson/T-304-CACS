@@ -10,6 +10,7 @@
 \usepackage{float}
 \usepackage{framed}
 \usepackage{listingsutf8}
+\usepackage{dsfont}
 \usepackage{enumerate}
 \usepackage{comment}
 \usepackage{epstopdf}
@@ -278,5 +279,134 @@ $\int_{0}^{1} x^2 \sqrt{1 - x} dx$ Integrate by-parts.
 \newline
 
 \noindent There might be some errors in this example.
+
+\section*{Linear Algebra}
+\subsection*{1.}
+
+$\int_{a}^{b} = F(b) - F(a)$
+\newline
+
+\noindent $sin(x)$ and $sin(x+\frac{\pi}{3})$
+
+\noindent $sin(x) = sin(x + \frac{\pi}{3})$
+
+\noindent $sin(x) = sin(x) cos(\frac{\pi}{3}) + cos(x) sin(\frac{pi}{3})$
+
+\noindent $sin(x) = \frac{1}{2} sin(x) + \frac{\sqrt{3}}{2} cos(x)$
+
+\noindent $sin(x) - \frac{1}{2} sin(x) = \frac{\sqrt{3}}{2} cos(x)$
+
+\noindent $\frac{1}{2} sin(x) = \frac{\sqrt{3}}{2} cos(x)$
+
+\noindent $\frac{1}{2} sin(x) = \frac{\sqrt{3}}{2} cos(x)$
+
+\noindent $sin(x) = \sqrt{3} cos(x)$
+
+\noindent $tan(x) = \sqrt{3} cos(x)$
+
+\noindent $tan(x) = \sqrt{3}$
+
+\noindent $k \in \mathds{Z}$
+\newline
+
+\noindent $\boxed{x = \frac{\pi}{3} + k \pi}$
+\newpage
+
+\noindent $\int_{\frac{-2\pi}{3}}^{\frac{\pi}{3}} sin(x + \frac{\pi}{3}) - sin(x) dx$
+
+\noindent Use angle sum to get:
+
+\noindent $\int_{\frac{-2\pi}{3}}^{\frac{\pi}{3}} cos(x + \frac{\pi}{6}) dx$
+
+\noindent Plug the number in:
+
+\noindent $sin(\frac{\pi}{3} + \frac{\pi}{6}) - sin(\frac{-2\pi}{3} + \frac{\pi}{6}) = 2$
+
+\subsection*{2.}
+
+\begin{tabular}{| l |}
+\hline
+$A = (1, -5, 5)$ \\
+$B = (11, 5, 0)$ \\
+$C = (3, 9, 10)$ \\
+\hline
+\end{tabular}
+\newline
+
+\noindent This is a triangle.
+
+
+
+\subsubsection*{(a) Side lengths}
+
+\noindent $|| \overline{AC} || = \sqrt{(3-1)^2 + (9+5)^2 + (10-5)^2} = \sqrt{2^2 + 14^2 + 5^2} = 15$
+
+\noindent $|| \overline{AB} || = \sqrt{180}$
+
+\noindent $|| \overline{BC} || = 15$
+
+\noindent The dot product tells you in how much in A directis is B going.
+
+\noindent The cross product gives us a 3D vector.
+
+\noindent Right hand rule tells us if it is going towards us or away from us.
+
+\subsubsection*{(b) Angle from A}
+
+\noindent \begin{tabular}{| l |}
+\hline
+$A = (a, b, c)$ \\
+$B = (d, e, f)$ \\
+\hline
+\end{tabular}
+\newline
+
+\noindent $AB = |A| \times |B| \times cos(p)$
+
+\noindent Dot product $ AB = ad + be + cf$
+\noindent
+
+\noindent Vectors:
+
+\noindent $\overline{AC} = ((3-1), (9+5), (10-5)) = (2, 14, 5)$
+
+\noindent $\overline{AB} = ((11-1), (5+5), (0-5)) = (10, 10, -5)$
+
+\noindent $\overline{BC} = ((3-11), (9-5), (10-0)) = (-8, 4, 10)$
+
+\noindent $\overline{AC} \times \overline{AB} = 20 + 140 - 25 = 135$
+
+\noindent Magnitude of the vector: 
+
+\noindent $||\overline{AB}|| = 6\sqrt{5}$
+
+\noindent $||\overline{AC}|| = 15$
+
+\noindent $135 = 6\sqrt{5} \times 15 \times cos(\varphi)$
+
+\noindent $135 = 90 \sqrt{5} \times cos(\varphi)$
+\newline
+
+\noindent $cos(\varphi) = \frac{135}{90\sqrt{5}}$
+\newline
+
+\noindent $arccos(\frac{135}{90\sqrt{5}})$
+
+\subsubsection*{(c) Area of triangle}
+
+\noindent Cross product $|A \times B| = |A| \times |B| sin(\varphi)$
+\newline
+
+\noindent $|\overline{AB} \times \overline{AC}| = |\overline{AB}| \times |\overline{AC}| \times sin(\varphi) = 6\sqrt{5} \times 15 \times sin(0.8) = 149.86$
+
+\subsubsection*{(d) Projection of $\overline{AC}$ to $\overline{AB}$}
+
+$proj_{\overline{AB}}$ $\overline{AC} = \frac{\overline{AB} \times \overline{AC}}{|\overline{AB}|} = \frac{135}{6\sqrt{5}} = \frac{9\sqrt{5}}{2}$
+
+\noindent Dot product: $\overline{AB} \times \overline{AC} = 135$
+
+\noindent $proj_{\overline{AB}}$ $\overline{AC}$ = vector $\times$ scaler = $(2, 14, 5) \times \frac{9\sqrt{5}}{2} = (9\sqrt{5}, 63 \sqrt{5}, \frac{45 \sqrt{5}}{2})$
+
+\subsubsection*{(e) Orthagonal $Proj_{\overline{AB}} \overline{AC}$}
 
 \end{document}
